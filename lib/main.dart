@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          fontFamily: GoogleFonts.poppins().fontFamily,
+          fontFamily: GoogleFonts.outfit().fontFamily,
           primaryColor: Color(0xff233C80)),
       home: MyHomePage(),
     );
@@ -28,8 +28,18 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
+          title: Text("Real Estate App"),
           backgroundColor: Color(0xff233C80),
         ),
-        body: SingleChildScrollView(child: LandingPage()));
+        body: SingleChildScrollView(child: LandingPage()),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Color.fromARGB(255, 233, 160, 24),
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.apartment), label: 'Houses'),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
+          ],
+        ));
   }
 }

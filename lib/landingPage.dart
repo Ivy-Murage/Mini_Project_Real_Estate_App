@@ -15,22 +15,25 @@ class LandingPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        SizedBox(
+                          height: 50,
+                        ),
                         Text(
-                            '"Find your student-friendly home, \n in just a few taps!"',
+                            '"Find Your Student-Friendly \n Home, In Just A Few Taps!"',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                fontSize: 32,
+                                fontSize: 30,
                                 color: Color(0xffFFFFFF))),
                         SizedBox(height: 15),
                         Text(
                           "Looking for a House? Worry No More. Discover student-approved living spaces, with just a swipe!",
                           style: TextStyle(
                             color: Color(0xffFFFFFF),
-                            fontSize: 18,
+                            fontSize: 15,
                           ),
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 12,
                         ),
                         Container(
                             width: MediaQuery.of(context).size.width * 0.4,
@@ -40,6 +43,9 @@ class LandingPage extends StatelessWidget {
                                 child: TextButton(
                                   onPressed: () {},
                                   child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
                                         "Get Started",
@@ -51,6 +57,7 @@ class LandingPage extends StatelessWidget {
                                       Icon(
                                         Icons.arrow_forward_sharp,
                                         color: Color.fromARGB(255, 25, 45, 100),
+                                        size: 20,
                                       )
                                     ],
                                   ),
@@ -61,6 +68,9 @@ class LandingPage extends StatelessWidget {
                       ],
                     ),
                   ),
+                ),
+                SizedBox(
+                  height: 12,
                 ),
                 Image(image: AssetImage('assets/images/home3.jpg'))
               ],
