@@ -26,10 +26,10 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Text("Real Estate App"),
           backgroundColor: Color(0xff233C80),
         ),
-        body: Center(child: LandingPage()));
+        body: SingleChildScrollView(child: LandingPage()));
   }
 }

@@ -62,7 +62,7 @@ class LandingPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Image(image: AssetImage('assets/images/home2.jpg'))
+                Image(image: AssetImage('assets/images/home3.jpg'))
               ],
             )));
   }
