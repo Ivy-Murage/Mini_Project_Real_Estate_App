@@ -28,18 +28,26 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: Text("Real Estate App"),
-          backgroundColor: Color(0xff233C80),
+          backgroundColor: Color.fromARGB(255, 7, 25, 72),
+          elevation: 0,
         ),
         body: SingleChildScrollView(child: LandingPage()),
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Color.fromARGB(255, 233, 160, 24),
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.apartment), label: 'Houses'),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
-          ],
-        ));
+        // bottomNavigationBar: NavBar()
+    );
+  }
+}
+
+class NavBar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      backgroundColor: Color.fromARGB(255, 233, 160, 24),
+      items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+        BottomNavigationBarItem(icon: Icon(Icons.apartment), label: 'Houses'),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
+      ],
+    );
+    throw UnimplementedError();
   }
 }

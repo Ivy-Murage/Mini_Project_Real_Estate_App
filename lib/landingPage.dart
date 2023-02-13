@@ -5,10 +5,11 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: Container(
-            color: Color(0xff233C80),
+            color: Color.fromARGB(255, 7, 25, 72),
             child: Column(
               children: [
                 Container(
+                  height: 300,
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Column(
@@ -16,7 +17,7 @@ class LandingPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          height: 50,
+                          height: 10,
                         ),
                         Text(
                             '"Find Your Student-Friendly \n Home, In Just A Few Taps!"',
@@ -56,7 +57,7 @@ class LandingPage extends StatelessWidget {
                                       ),
                                       Icon(
                                         Icons.arrow_forward_sharp,
-                                        color: Color.fromARGB(255, 25, 45, 100),
+                                        color: Color.fromARGB(255, 7, 25, 72),
                                         size: 20,
                                       )
                                     ],
