@@ -21,7 +21,7 @@ class LandingPage extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                                '"Find Your Student-Friendly \n Home, In Just A Few Taps!"',
+                                '"Find Your Student-Friendly\nHome, In Just A Few Taps!"',
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 30,
