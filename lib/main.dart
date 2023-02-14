@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:real_estate_app_mini_project/SignUp.dart';
 import 'package:real_estate_app_mini_project/landingPage.dart';
 
 void main() {
@@ -26,13 +27,14 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset: false,
-        appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 7, 25, 72),
-          elevation: 0,
-        ),
-        body: SingleChildScrollView(child: LandingPage()),
-        // bottomNavigationBar: NavBar()
+      resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 7, 25, 72),
+        elevation: 0,
+      ),
+      body: SingleChildScrollView(child: SignUp()),
+      // LandingPage()
+      // bottomNavigationBar: NavBar()
     );
   }
 }
