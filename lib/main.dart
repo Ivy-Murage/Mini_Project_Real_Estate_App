@@ -32,8 +32,9 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 7, 25, 72),
         elevation: 0,
       ),
-      body: SingleChildScrollView(child: SignUp()),
-      // LandingPage()
+      body: SingleChildScrollView(child: LandingPage()),
+      // SignUp()
+
       // bottomNavigationBar: NavBar()
     );
   }

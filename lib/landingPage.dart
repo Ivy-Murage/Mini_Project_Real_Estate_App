@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:real_estate_app_mini_project/SignUp.dart';
 
 class LandingPage extends StatelessWidget {
   @override
@@ -43,7 +44,13 @@ class LandingPage extends StatelessWidget {
                                     minWidth: 150.0,
                                     height: 50.0,
                                     child: TextButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    SignUp()));
+                                      },
                                       child: Row(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.center,
@@ -53,9 +60,10 @@ class LandingPage extends StatelessWidget {
                                           Text(
                                             "Get Started",
                                             style: TextStyle(
-                                                color: Color(0xff233C80),
+                                                color: Color.fromARGB(
+                                                    255, 7, 25, 72),
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 15),
+                                                fontSize: 18),
                                           ),
                                           Icon(
                                             Icons.arrow_forward_sharp,
