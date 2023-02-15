@@ -141,7 +141,11 @@ class FormWidget extends StatelessWidget {
                 Align(
                   alignment: AlignmentDirectional.center,
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        // Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        //   return LoginPage()
+                        // },));
+                      },
                       child: Text.rich(TextSpan(children: [
                         TextSpan(text: "Already Have an Account?"),
                         TextSpan(text: "Login")
@@ -152,12 +156,4 @@ class FormWidget extends StatelessWidget {
           )),
     );
   }
-}
-
-class FormThemeData {
-  static InputDecorationTheme lightInputTheme = const InputDecorationTheme(
-      prefixIconColor: Color(0xffF0F0F0),
-      border: OutlineInputBorder(),
-      focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(width: 2.0, color: Color(0xffF0F0F0))));
 }
