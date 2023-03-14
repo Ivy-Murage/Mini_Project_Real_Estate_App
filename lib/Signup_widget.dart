@@ -32,6 +32,7 @@ class SignUp extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                           textAlign: TextAlign.left)
                     ],
+                    isRepeatingAnimation: false,
                   ),
                 ),
                 const SizedBox(height: 20),

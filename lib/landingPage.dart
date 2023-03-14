@@ -75,7 +75,7 @@ class LandingPage extends StatelessWidget {
                                         ],
                                       ),
                                       style: ElevatedButton.styleFrom(
-                                          elevation: 12.0,
+                                          elevation: 10.0,
                                           backgroundColor: Color(0XFFF0F0F0)),
                                     ))),
                           ],
