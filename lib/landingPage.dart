@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate_app_mini_project/SignUp.dart';
+import 'package:real_estate_app_mini_project/Signup_widget.dart';
 
 class LandingPage extends StatelessWidget {
   @override

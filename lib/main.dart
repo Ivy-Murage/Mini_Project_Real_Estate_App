@@ -12,6 +12,8 @@ Future main() async {
   runApp(const MyApp());
 }
 
+final navigatorKey = GlobalKey<NavigatorState>();
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -19,6 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           fontFamily: GoogleFonts.outfit().fontFamily,
@@ -46,21 +49,6 @@ class MyHomePage extends StatelessWidget {
           }
         },
       ),
-      bottomNavigationBar: NavBar(),
-    );
-  }
-}
-
-class NavBar extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      backgroundColor: Color.fromARGB(255, 233, 160, 24),
-      items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-        BottomNavigationBarItem(icon: Icon(Icons.apartment), label: 'Houses'),
-        BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
-      ],
     );
   }
 }
