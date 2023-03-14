@@ -51,7 +51,7 @@ class _FormWidgetState extends State<FormWidget> {
         print(e);
       }
       // navigatorKey.currentState!.popUntil((route) => route.isFirst);
-      navigatorKey.currentState!.push(MaterialPageRoute(
+      navigatorKey.currentState!.pushReplacement(MaterialPageRoute(
         builder: (context) => LoginPage(),
       ));
     }
