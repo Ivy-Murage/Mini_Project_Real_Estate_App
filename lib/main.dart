@@ -1,9 +1,14 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:real_estate_app_mini_project/House_pages.dart';
 import 'package:real_estate_app_mini_project/SignUp.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:real_estate_app_mini_project/landingPage.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -32,10 +37,16 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 7, 25, 72),
         elevation: 0,
       ),
-      body: SingleChildScrollView(child: LandingPage()),
-      // SignUp()
-
-      // bottomNavigationBar: NavBar()
+      body: StreamBuilder<User?>(
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return HousePages();
+          } else {
+            return SingleChildScrollView(child: LandingPage());
+          }
+        },
+      ),
+      bottomNavigationBar: NavBar(),
     );
   }
 }
@@ -51,6 +62,5 @@ class NavBar extends StatelessWidget {
         BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile')
       ],
     );
-    throw UnimplementedError();
   }
 }
