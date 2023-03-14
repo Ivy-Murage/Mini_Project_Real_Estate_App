@@ -143,8 +143,8 @@ class _FormWidgetState extends State<FormWidget> {
                                     width: 2.0, color: Color(0xffF0F0F0)))),
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         validator: (email) =>
-                            email != null && EmailValidator.validate(email)
-                                ? "Invalid Email"
+                            email != null && !EmailValidator.validate(email)
+                                ? "Enter a valid email"
                                 : null,
                       ),
                       SizedBox(height: 20),
@@ -176,6 +176,10 @@ class _FormWidgetState extends State<FormWidget> {
                               borderSide: BorderSide(
                                   width: 2.0, color: Color(0xffF0F0F0))),
                         ),
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
+                        validator: (value) => value != null && value.length < 6
+                            ? "Enter a password with 6 characters or more"
+                            : null,
                       ),
                       SizedBox(
                         height: 20,
@@ -211,6 +215,10 @@ class _FormWidgetState extends State<FormWidget> {
                                   width: 2.0,
                                   color: Color(0xffF0F0F0),
                                 ))),
+                        autovalidateMode: AutovalidateMode.onUserInteraction,
+                        validator: (value) => value != null && value.length < 6
+                            ? "Passowrd doesn't match"
+                            : null,
                       ),
                       SizedBox(height: 20),
                       SizedBox(
