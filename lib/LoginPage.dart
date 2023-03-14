@@ -3,8 +3,14 @@ import 'package:flutter/material.dart';
 class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Login Please"),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 7, 25, 72),
+        elevation: 0,
+      ),
+      body: Center(
+        child: Text("Login Please"),
+      ),
     );
   }
 }

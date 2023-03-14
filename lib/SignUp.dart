@@ -50,7 +50,10 @@ class _FormWidgetState extends State<FormWidget> {
       } on FirebaseAuthException catch (e) {
         print(e);
       }
-      navigatorKey.currentState!.popUntil((route) => route.isFirst);
+      // navigatorKey.currentState!.popUntil((route) => route.isFirst);
+      navigatorKey.currentState!.push(MaterialPageRoute(
+        builder: (context) => LoginPage(),
+      ));
     }
   }
 
