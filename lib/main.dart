@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         SignUp.routeName: (context) {
           return SignUp();
         },
-        LoginPage.routeName: (context) => LoginPage()
+        LoginWidget.routeName: (context) => LoginWidget()
       },
     );
   }

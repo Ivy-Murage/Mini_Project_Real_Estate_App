@@ -6,9 +6,6 @@ import 'package:real_estate_app_mini_project/LoginPage.dart';
 import 'package:real_estate_app_mini_project/main.dart';
 
 class FormWidget extends StatefulWidget {
-  // final VoidCallback onClickedSignIn;
-
-  // const FormWidget({Key? key, required this.onClickedSignIn}) : super(key: key);
 
   @override
   State<FormWidget> createState() => _FormWidgetState();
@@ -51,12 +48,9 @@ class _FormWidgetState extends State<FormWidget> {
       } on FirebaseAuthException catch (e) {
         print(e);
       }
-      // navigatorKey.currentState!.popUntil((route) => route.isFirst);
-      // navigatorKey.currentState!.pushReplacement(MaterialPageRoute(
-      //   builder: (context) => LoginPage(),
-      // ));
+ 
 
-      Navigator.pushNamed(context, LoginPage.routeName);
+      Navigator.pushNamed(context, LoginWidget.routeName);
     }
   }
 
@@ -194,7 +188,7 @@ class _FormWidgetState extends State<FormWidget> {
                             onPressed: () {
                               SignUp();
                             },
-                            child: Text("signup".toUpperCase(),
+                            child: Text("sign up".toUpperCase(),
                                 style: TextStyle(
                                     fontSize: 16,
                                     color: Colors.black,
@@ -206,13 +200,13 @@ class _FormWidgetState extends State<FormWidget> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                'No account ',
+                                'Already have an account ',
                                 style: TextStyle(color: Color(0xffF0F0F0)),
                               ),
                               TextButton(
                                 onPressed: () {
                                   Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => LoginPage()));
+                                      builder: (context) => LoginWidget()));
                                 },
                                 child: Text(
                                   'Sign In',
