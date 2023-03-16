@@ -14,6 +14,12 @@ This is where real estate software tailored exclusively to students' requirement
 * A user can view house details
 
 
+#### Project Setup
+
+Clone this repo by running 
+Install all needed dependencies by running ```flutter pub get```
+Start Local server by running ```flutter run```
+
 
 #### Contributors
 * Yvan Samunani
