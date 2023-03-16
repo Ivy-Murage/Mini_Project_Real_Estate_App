@@ -21,6 +21,9 @@ This is where real estate software tailored exclusively to students' requirement
 * Start Local server by running ```flutter run```
 
 
+##### Challenges Faced
+One of the challenges we faced during development is intergration of firebase
+
 #### Contributors
 * Yvan Samunani
 * Ivy Murage
