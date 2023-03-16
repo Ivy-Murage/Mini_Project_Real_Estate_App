@@ -5,8 +5,15 @@ For students, finding inexpensive housing can be very difficult, especially in u
 
 
 #### Solution Statement
+This is where real estate software tailored exclusively to students' requirements can really help. The app must assist students in quickly and easily locating affordable homes that fit their needs and preferences for location and price. Additionally, the app should give pupils pertinent details about the houses, such as the cost of living, neighborhood conveniences, and the landlord's standing. To simplify the process of locating a place to live as stress-free as possible, the objective is to establish a one-stop shop for students looking for inexpensive accommodation.
+
+####
+
 
 
 #### Contributors
+* Yvan Samunani
+* Ivy Murage
+* Nancy Gachee
 
 
