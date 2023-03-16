@@ -1,16 +1,12 @@
 # real_estate_app_mini_project
 
-A new Flutter project.
+#### Problem Statement
+For students, finding inexpensive housing can be very difficult, especially in urban locations where rents are high, and real estate costs are high. It can be challenging for many students to find an appropriate and cheap location to live since they find it tough to reconcile the cost of living with their educational obligations. 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+#### Solution Statement
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+#### Contributors
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
