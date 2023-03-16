@@ -3,6 +3,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:real_estate_app_mini_project/SignUp.dart';
 
 class SignUp extends StatelessWidget {
+  static const routeName = '/signup';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

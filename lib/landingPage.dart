@@ -46,11 +46,14 @@ class LandingPage extends StatelessWidget {
                                     height: 50.0,
                                     child: TextButton(
                                       onPressed: () {
-                                        Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    SignUp()));
+                                        // Navigator.push(
+                                        //     context,
+                                        //     MaterialPageRoute(
+                                        //         builder: (context) =>
+                                        //             SignUp()));
+
+                                        Navigator.pushNamed(
+                                            context, SignUp.routeName);
                                       },
                                       child: Row(
                                         crossAxisAlignment:

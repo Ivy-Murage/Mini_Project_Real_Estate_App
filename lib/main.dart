@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:real_estate_app_mini_project/House_pages.dart';
 import 'package:real_estate_app_mini_project/SignUp.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:real_estate_app_mini_project/Signup_widget.dart';
 import 'package:real_estate_app_mini_project/landingPage.dart';
 
 Future main() async {
@@ -27,6 +28,11 @@ class MyApp extends StatelessWidget {
           fontFamily: GoogleFonts.outfit().fontFamily,
           primaryColor: Color(0xff233C80)),
       home: MyHomePage(),
+      routes: {
+        SignUp.routeName: (context) {
+          return SignUp();
+        }
+      },
     );
   }
 }
