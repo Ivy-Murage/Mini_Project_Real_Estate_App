@@ -58,12 +58,13 @@ class _LoginWidgetState extends State<LoginWidget> {
         ),
         body: Padding(
             padding: const EdgeInsets.all(12.0),
-            child: Center(
+            child: SingleChildScrollView(
+                child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                      height: 200,
+                      height: 150,
                       child:
                           Image(image: AssetImage('assets/images/splash.png'))),
                   Container(
@@ -81,7 +82,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     MainAxisAlignment.spaceEvenly,
                                 children: [
                                   SizedBox(
-                                    height: 20,
+                                    height: 10,
                                   ),
                                   TextFormField(
                                     style: TextStyle(color: Color(0xffF0F0F0)),
@@ -113,7 +114,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         ? "Enter a valid email"
                                         : null,
                                   ),
-                                  SizedBox(height: 20),
+                                  SizedBox(height: 10),
                                   TextFormField(
                                     obscureText: _isHidden,
                                     style: TextStyle(color: Color(0xffF0F0F0)),
@@ -204,7 +205,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       )),
                 ],
               ),
-            )));
+            ))));
   }
 
   void _togglePasswordView() {

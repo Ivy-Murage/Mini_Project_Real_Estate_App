@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class RealEstateProfilePage extends StatelessWidget {
+  static const routeName = '/profile';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue[50],
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Color.fromARGB(255, 7, 25, 72),
         title: Text('Real Estate Profile Page'),
       ),
       body: Padding(
