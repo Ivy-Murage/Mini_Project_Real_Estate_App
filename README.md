@@ -16,9 +16,9 @@ This is where real estate software tailored exclusively to students' requirement
 
 #### Project Setup
 
-Clone this repo by running 
-Install all needed dependencies by running ```flutter pub get```
-Start Local server by running ```flutter run```
+* Clone this repo by running 
+* Install all needed dependencies by running ```flutter pub get```
+* Start Local server by running ```flutter run```
 
 
 #### Contributors
