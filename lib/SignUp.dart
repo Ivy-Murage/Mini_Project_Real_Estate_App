@@ -10,7 +10,6 @@ class FormWidget extends StatefulWidget {
 
   // const FormWidget({Key? key, required this.onClickedSignIn}) : super(key: key);
 
-
   @override
   State<FormWidget> createState() => _FormWidgetState();
 }
@@ -53,9 +52,11 @@ class _FormWidgetState extends State<FormWidget> {
         print(e);
       }
       // navigatorKey.currentState!.popUntil((route) => route.isFirst);
-      navigatorKey.currentState!.pushReplacement(MaterialPageRoute(
-        builder: (context) => LoginPage(),
-      ));
+      // navigatorKey.currentState!.pushReplacement(MaterialPageRoute(
+      //   builder: (context) => LoginPage(),
+      // ));
+
+      Navigator.pushNamed(context, LoginPage.routeName);
     }
   }
 

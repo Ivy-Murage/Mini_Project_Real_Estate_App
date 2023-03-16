@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:real_estate_app_mini_project/House_pages.dart';
+import 'package:real_estate_app_mini_project/LoginPage.dart';
 import 'package:real_estate_app_mini_project/SignUp.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:real_estate_app_mini_project/Signup_widget.dart';
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
       routes: {
         SignUp.routeName: (context) {
           return SignUp();
-        }
+        },
+        LoginPage.routeName: (context) => LoginPage()
       },
     );
   }
