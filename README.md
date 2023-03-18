@@ -16,7 +16,7 @@ This is where real estate software tailored exclusively to students' requirement
 
 #### Project Setup
 
-* Clone this repo by running 
+* Clone this repo by running ```git@github.com:Ivy-Murage/Mini_Project_Real_Estate_App.git```
 * Install all needed dependencies by running ```flutter pub get```
 * Start Local server by running ```flutter run```
 
