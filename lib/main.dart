@@ -35,7 +35,9 @@ class MyApp extends StatelessWidget {
           return SignUp();
         },
         LoginWidget.routeName: (context) => LoginWidget(),
-        RealEstateProfilePage.routeName: (context) => RealEstateProfilePage()
+        RealEstateProfilePage.routeName: (context) => RealEstateProfilePage(),
+        HousesPage.routeName: (context) => HousesPage(),
+
       },
     );
   }
@@ -53,7 +55,7 @@ class MyHomePage extends StatelessWidget {
       body: StreamBuilder<User?>(
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return HousePages();
+            return HousesPage();
           } else {
             return SingleChildScrollView(child: LandingPage());
           }

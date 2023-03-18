@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class HousePage extends StatelessWidget {
+  static const routeName = '/house-page';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

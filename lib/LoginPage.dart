@@ -2,6 +2,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:real_estate_app_mini_project/House_pages.dart';
 import 'package:real_estate_app_mini_project/LoginPage.dart';
 import 'package:real_estate_app_mini_project/Signup_widget.dart';
 import 'package:real_estate_app_mini_project/main.dart';
@@ -47,7 +48,7 @@ class _LoginWidgetState extends State<LoginWidget> {
       print(e);
     }
 
-    // Navigator.pushNamed(context, Home.routeName);
+    Navigator.pushNamed(context, HousesPage.routeName);
   }
 
   Widget build(BuildContext context) {
