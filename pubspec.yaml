@@ -69,6 +69,9 @@ flutter:
   assets:
     - assets/images/home3.jpg
     - assets/images/home2.jpg
+    - assets/images/home4.jpeg
+    - assets/images/home5.jpeg
+    - assets/images/home1.jpeg
     - assets/images/splash.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

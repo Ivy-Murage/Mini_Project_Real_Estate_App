@@ -7,7 +7,7 @@ class HousePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xff233C80),
+        backgroundColor: const Color.fromARGB(255, 7, 25, 72),
         title: Text('Property Details'),
       ),
       body: SingleChildScrollView(
@@ -135,37 +135,31 @@ class HousePage extends StatelessWidget {
                   SizedBox(height: 10.0),
                   Text(
                     'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-                  style: TextStyle(fontSize: 16.0),
+                    style: TextStyle(fontSize: 16.0),
                   ),
-                SizedBox(height: 20.0),
-                Center(
-                child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text('Rent Now'),
-                    style: ElevatedButton.styleFrom(
-                    primary: Colors.blue,
-                    onPrimary: Colors.white,
-                    // ignore: prefer_const_constructors
-                    padding: EdgeInsets.symmetric(
-                    horizontal: 50.0,
-                    vertical: 10.0,
+                  SizedBox(height: 20.0),
+                  Center(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text('Rent Now'),
+                      style: ElevatedButton.styleFrom(
+                        primary: Color.fromARGB(255, 7, 25, 72),
+                        onPrimary: Colors.white,
+                        // ignore: prefer_const_constructors
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 50.0,
+                          vertical: 10.0,
+                        ),
+                        textStyle: TextStyle(fontSize: 20.0),
+                      ),
                     ),
-                    textStyle: TextStyle(fontSize: 20.0),
-                    ),
-                ),
-                ),
-              ],
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
-    ),
-  );
+    );
   }
 }
-
-
-
-
-
-

@@ -16,7 +16,7 @@ class _HousesPageState extends State<HousesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xff233C80),
+        backgroundColor: const Color.fromARGB(255, 7, 25, 72),
         elevation: 0,
         title: Row(
           children: [
@@ -79,7 +79,7 @@ class _HousesPageState extends State<HousesPage> {
                     border: InputBorder.none,
                     prefixIcon: Icon(
                       Icons.search,
-                      color: Color(0xff233C80),
+                      color: Color.fromARGB(255, 7, 25, 72),
                     ),
                   ),
                 ),
@@ -92,7 +92,7 @@ class _HousesPageState extends State<HousesPage> {
                   const Text(
                     "Trending Properties",
                     style: TextStyle(
-                      color: Color(0xff233C80),
+                      color: Color.fromARGB(255, 7, 25, 72),
                       fontWeight: FontWeight.bold,
                       fontSize: 18.0,
                     ),
@@ -100,7 +100,7 @@ class _HousesPageState extends State<HousesPage> {
                   const Text(
                     "See more",
                     style: TextStyle(
-                      color: Color(0xff233C80),
+                      color: Color.fromARGB(255, 7, 25, 72),
                       fontSize: 14.0,
                     ),
                   ),
@@ -144,7 +144,7 @@ class _HousesPageState extends State<HousesPage> {
                                     style: TextStyle(
                                       fontSize: 13.0,
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xff233C80),
+                                      color: Color.fromARGB(255, 7, 25, 72),
                                     ),
                                   ),
                                 ),
@@ -156,7 +156,7 @@ class _HousesPageState extends State<HousesPage> {
                                     style: TextStyle(
                                       fontSize: 13.0,
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xff233C80),
+                                      color: Color.fromARGB(255, 7, 25, 72),
                                     ),
                                   ),
                                 ),
@@ -212,7 +212,7 @@ class _HousesPageState extends State<HousesPage> {
                                     style: TextStyle(
                                       fontSize: 13.0,
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xff233C80),
+                                      color: Color.fromARGB(255, 7, 25, 72),
                                     ),
                                   ),
                                 ),
@@ -224,7 +224,7 @@ class _HousesPageState extends State<HousesPage> {
                                     style: TextStyle(
                                       fontSize: 13.0,
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xff233C80),
+                                      color: Color.fromARGB(255, 7, 25, 72),
                                     ),
                                   ),
                                 ),
@@ -280,7 +280,7 @@ class _HousesPageState extends State<HousesPage> {
                                     style: TextStyle(
                                       fontSize: 13.0,
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xff233C80),
+                                      color: Color.fromARGB(255, 7, 25, 72),
                                     ),
                                   ),
                                 ),
@@ -292,7 +292,7 @@ class _HousesPageState extends State<HousesPage> {
                                     style: TextStyle(
                                       fontSize: 13.0,
                                       fontWeight: FontWeight.bold,
-                                      color: Color(0xff233C80),
+                                      color: Color.fromARGB(255, 7, 25, 72),
                                     ),
                                   ),
                                 ),
@@ -318,7 +318,7 @@ class _HousesPageState extends State<HousesPage> {
                       ),
                     ],
                     options: CarouselOptions(
-                      height: 200.0,
+                      height: 220.0,
                       viewportFraction: 0.8,
                       enlargeCenterPage: true,
                       autoPlay: true,
@@ -336,7 +336,7 @@ class _HousesPageState extends State<HousesPage> {
                           style: TextStyle(
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
-                            color: Color(0xff233C80),
+                            color: Color.fromARGB(255, 7, 25, 72),
                           ),
                         ),
                       ),
@@ -388,7 +388,7 @@ class _HousesPageState extends State<HousesPage> {
                                               style: TextStyle(
                                                 fontSize: 13.0,
                                                 fontWeight: FontWeight.bold,
-                                                color: Color(0xff233C80),
+                                                color: Color.fromARGB(255, 7, 25, 72),
                                               ),
                                             ),
                                             Text(
@@ -396,7 +396,7 @@ class _HousesPageState extends State<HousesPage> {
                                               style: TextStyle(
                                                 fontSize: 13.0,
                                                 fontWeight: FontWeight.bold,
-                                                color: Color(0xff233C80),
+                                                color: Color.fromARGB(255, 7, 25, 72),
                                               ),
                                             ),
                                           ],
