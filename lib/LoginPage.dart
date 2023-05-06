@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:real_estate_app_mini_project/House_pages.dart';
 import 'package:real_estate_app_mini_project/LoginPage.dart';
 import 'package:real_estate_app_mini_project/Signup_widget.dart';
+import 'package:real_estate_app_mini_project/House_register.dart';
 import 'package:real_estate_app_mini_project/main.dart';
 
 class LoginWidget extends StatefulWidget {
@@ -189,7 +190,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               Navigator.of(context).push(
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          SignUp()));
+                                                          HouseRegister()));
                                             },
                                             child: Text(
                                               'Sign Up',

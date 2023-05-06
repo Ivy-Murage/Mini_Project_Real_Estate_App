@@ -37,7 +37,6 @@ class MyApp extends StatelessWidget {
         LoginWidget.routeName: (context) => LoginWidget(),
         RealEstateProfilePage.routeName: (context) => RealEstateProfilePage(),
         HousesPage.routeName: (context) => HousesPage(),
-
       },
     );
   }
@@ -49,7 +48,6 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 7, 25, 72),
         elevation: 0,
       ),
       body: StreamBuilder<User?>(

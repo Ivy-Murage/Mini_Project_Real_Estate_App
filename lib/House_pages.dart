@@ -1,7 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:real_estate_app_mini_project/House_page.dart';
+import 'package:real_estate_app_mini_project/House_profile.dart';
+import 'package:real_estate_app_mini_project/location_service.dart';
+import 'package:real_estate_app_mini_project/Models/houses.dart';
+import 'package:real_estate_app_mini_project/widget/houses_widget.dart';
+import 'package:real_estate_app_mini_project/Profile.dart';
 
 class HousesPage extends StatefulWidget {
   const HousesPage({Key? key}) : super(key: key);
@@ -12,6 +17,16 @@ class HousesPage extends StatefulWidget {
 }
 
 class _HousesPageState extends State<HousesPage> {
+  String? lat, long, localCity, subLocalCity;
+  final TextEditingController _searchController = TextEditingController();
+  String? _searchLocation;
+
+  @override
+  void initState() {
+    super.initState();
+    getLocation();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,24 +37,23 @@ class _HousesPageState extends State<HousesPage> {
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 SizedBox(
                   child: Text(
                     "Current Location",
                     style: TextStyle(
                       color: Color(0xffffffff),
-                      fontSize: 15,
+                      fontSize: 20,
                     ),
                   ),
                 ),
-                SizedBox(height: 4),
+                SizedBox(
+                  height: 5,
+                ),
                 Text(
-                  "Gasabo, Kigali",
-                  style: TextStyle(
-                    color: Color(0xffffffff),
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
+                    "${subLocalCity ?? 'Loading ...'}, ${localCity ?? 'Loading ...'}"),
+                const SizedBox(
+                  height: 15,
                 ),
               ],
             ),
@@ -51,7 +65,14 @@ class _HousesPageState extends State<HousesPage> {
               Icons.account_circle,
               color: Color(0xffffffff),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => RealEstateProfilePage(),
+                ),
+              );
+            },
           ),
         ],
       ),
@@ -73,15 +94,29 @@ class _HousesPageState extends State<HousesPage> {
                     ),
                   ],
                 ),
-                child: const TextField(
+                child: TextField(
+                  controller: _searchController,
                   decoration: InputDecoration(
-                    hintText: "Search for houses...",
-                    border: InputBorder.none,
-                    prefixIcon: Icon(
-                      Icons.search,
-                      color: Color.fromARGB(255, 7, 25, 72),
-                    ),
-                  ),
+                      hintText: "Search for houses...",
+                      border: InputBorder.none,
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: Color.fromARGB(255, 7, 25, 72),
+                      ),
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            _searchController.clear();
+                            _searchLocation = null;
+                          });
+                        },
+                        icon: Icon(Icons.clear),
+                      )),
+                  onSubmitted: (value) {
+                    setState(() {
+                      _searchLocation = value;
+                    });
+                  },
                 ),
               ),
               const SizedBox(height: 16.0),
@@ -123,6 +158,7 @@ class _HousesPageState extends State<HousesPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
+                              // ignore: prefer_const_constructors
                               padding: EdgeInsets.only(top: 15.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10.0),
@@ -326,106 +362,44 @@ class _HousesPageState extends State<HousesPage> {
                     ),
                   ),
                   const SizedBox(height: 16.0),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.only(top: 10.0),
-                        child: Text(
-                          'Latest Properties',
-                          style: TextStyle(
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                            color: Color.fromARGB(255, 7, 25, 72),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 10.0),
-                      SizedBox(
-                        height: 118.0, // set the height to the desired value
-                        child: SingleChildScrollView(
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            itemCount: 5,
-                            itemBuilder: (BuildContext context, int index) {
-                              return Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(vertical: 8.0),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => HousePage()),
-                                    );
-                                  },
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Container(
-                                        height: 80.0,
-                                        width: 80.0,
-                                        decoration: BoxDecoration(
-                                          color: Colors.grey,
-                                          borderRadius:
-                                              BorderRadius.circular(10.0),
-                                          image: const DecorationImage(
-                                            image: AssetImage(
-                                                'assets/images/home5.jpeg'),
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                      const SizedBox(width: 8.0),
-                                      Expanded(
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            const Text(
-                                              "Beachfront Villa",
-                                              style: TextStyle(
-                                                fontSize: 13.0,
-                                                fontWeight: FontWeight.bold,
-                                                color: Color.fromARGB(255, 7, 25, 72),
-                                              ),
-                                            ),
-                                            Text(
-                                              "Miami, Florida",
-                                              style: TextStyle(
-                                                fontSize: 13.0,
-                                                fontWeight: FontWeight.bold,
-                                                color: Color.fromARGB(255, 7, 25, 72),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                      const SizedBox(width: 8.0),
-                                      const Text(
-                                        "\$800",
-                                        style: TextStyle(
-                                          fontSize: 16.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                 ],
               ),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                'Latest Properties',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 7, 25, 72),
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              housesWidget(context, []),
             ],
           ),
         ),
       ),
     );
+  }
+
+  void getLocation() async {
+    final service = LocationService();
+    final locationData = await service.getLocation();
+
+    if (locationData != null) {
+      final placeMark = await service.getPlaceMark(locationData: locationData);
+
+      setState(() {
+        lat = locationData.latitude!.toStringAsFixed(2);
+        long = locationData.longitude!.toStringAsExponential(2);
+
+        localCity = placeMark?.locality ?? 'could not get country';
+        subLocalCity = placeMark?.subLocality ?? 'could not get admin area';
+      });
+    }
   }
 }

@@ -8,7 +8,7 @@ class RealEstateProfilePage extends StatelessWidget {
       backgroundColor: Colors.blue[50],
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 7, 25, 72),
-        title: Text('Real Estate Profile Page'),
+        title: Text('Profile Page'),
       ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
