@@ -190,7 +190,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               Navigator.of(context).push(
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          HouseRegister()));
+                                                          SignUp()));
                                             },
                                             child: Text(
                                               'Sign Up',
