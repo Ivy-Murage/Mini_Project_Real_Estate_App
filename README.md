@@ -24,9 +24,9 @@ This is where real estate software tailored exclusively to students' requirement
 ##### Challenges Faced
 One of the challenges we faced during development is intergration of firebase
 #### Project Vidoes
-[Development process Video]([https://drive.google.com/file/d/1F94UQ2VLCWAE0e2OS9tkPhKRGbEX7oDY/view?usp=sharing])
 
 [Project Demo]([https://link-url-here.org](https://drive.google.com/file/d/1zAyokvGCOVFQPgyAlyBN1fP3xtJ-4BbO/view?usp=share_link))
+
 #### Contributors
 * Yvan Samunani
 * Ivy Murage
